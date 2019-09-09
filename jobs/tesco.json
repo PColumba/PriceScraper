@@ -1,0 +1,42 @@
+{
+  "jobId": "prices_tesco",
+  "baseURL": "https://ezakupy.tesco.pl/groceries/pl-PL/shop/",
+  "pageParam": "page",
+  "pageOffset": 1,
+
+  "priceValueExtractor": {
+    "elementSelector": ".price-per-quantity-weight [class=\"value\"]"
+  },
+
+  "priceTypeExtractor": {
+    "elementSelector": ".price-per-quantity-weight [class=\"weight\"]"
+  },
+
+  "productIdExtractor": {
+    "elementSelector": ".tile-content",
+    "attributeName": "data-auto-id"
+  },
+
+  "productNameExtractor": {
+    "elementSelector": "a.sc-htoDjs"
+  },
+
+  "productsListExtractor": {
+    "elementSelector": ".product-list.grid .product-list--list-item"
+  },
+
+  "pageCountExtractor": {
+    "elementSelector": ".pagination--button:not(.prev-next)",
+    "elementChildText": true,
+    "extractLastElement": true
+  },
+
+  "categories": [
+    "owoce-warzywa/all",
+    "pieczywo-cukiernia/all",
+    "mieso-ryby-garmaz/all",
+    "art.-spozywcze/all",
+    "mrozonki/all",
+    "dla-dzieci/zywnosc-dla-dzieci/all",
+    "nabial-i-jaja/all"]
+}

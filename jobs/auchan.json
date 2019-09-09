@@ -1,0 +1,76 @@
+{
+  "jobId": "prices_auchan",
+  "baseURL": "https://www.auchandirect.pl/",
+  "pageParam": "page",
+  "pageOffset": 0,
+
+  "priceValueExtractor": {
+    "elementSelector": "p.packaging",
+    "elementTextPattern": "^(?:\\s*)([0-9]+,?[0-9]*)(?:zł)"
+  },
+
+  "priceTypeExtractor": {
+    "elementSelector": "p.packaging",
+    "elementTextPattern": "(?:/\\s)([A-Za-z]+\\.?)$"
+  },
+
+  "productIdExtractor": {
+    "elementSelector": "a.about",
+    "attributeName": "onclick",
+    "attributeTextPattern": "(?:\\(')([0-9]+)(?:')"
+  },
+
+  "productNameExtractor": {
+    "elementSelector": "a.about",
+    "elementChildText": true
+  },
+
+  "productsListExtractor": {
+    "elementSelector": "#search-product-list article.product"
+  },
+
+  "pageCountExtractor": {
+    "elementSelector": "#loadMoreProductsButton",
+    "attributeName": "data-maxpage"
+  },
+
+  "categories": ["c-12011",
+    "c-12012",
+    "c-13059",
+    "c-2034",
+    "c-12015",
+    "c-12013",
+    "c-12016",
+    "c-9000326",
+    "c-12018",
+    "c-12019",
+    "c-12024",
+    "c-12017",
+    "c-12020",
+    "c-826",
+    "c-12022",
+    "c-12023",
+    "c-12025",
+    "c-12026",
+    "c-12027",
+    "c-12028",
+    "c-12029",
+    "c-12033",
+    "c-12031",
+    "c-12030",
+    "c-12032",
+    "c-12034",
+    "c-12035",
+    "c-120350",
+    "c-12036",
+    "c-12037",
+    "c-12038",
+    "c-12039",
+    "c-12040",
+    "c-12041",
+    "c-13153",
+    "c-12042",
+    "c-12044",
+    "c-12075",
+    "c-12300"]
+}

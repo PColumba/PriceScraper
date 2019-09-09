@@ -1,0 +1,50 @@
+{
+  "jobId": "prices_carrefour",
+  "baseURL": "https://zakupycodzienne.carrefour.pl/",
+  "pageCountURLExtension": "?page=1000000",
+  "pageParam": "page",
+  "pageOffset": 0,
+
+
+  "priceValueExtractor": {
+    "elementSelector": ".jss61.jss67",
+    "elementTextPattern": "([0-9]+,?[0-9]*)"
+  },
+
+  "priceTypeExtractor": {
+    "elementSelector": "aside.jss61.jss69"
+  },
+
+  "productIdExtractor": {
+    "elementSelector": "a.jss44",
+    "attributeName": "href",
+    "attributeTextPattern": "(?:/)([A-Za-z0-9\\-]+)$"
+  },
+
+  "productNameExtractor": {
+    "elementSelector": "a.jss44",
+    "attributeName": "title"
+  },
+
+  "productsListExtractor": {
+    "elementSelector": "div.jss278 div.jss279"
+  },
+
+  "pageCountExtractor": {
+    "elementSelector": "button.jss44.jss101.jss103.jss106.jss281.jss280 > span.jss102",
+    "extractLastElement": true
+  },
+
+  "categories": [
+    "mleko-nabial-jaja",
+    "wedliny-kielbasy",
+    "ryby-i-owoce-morza",
+    "mieso",
+    "dania-gotowe-i-przystawki",
+    "owoce-warzywa-ziola",
+    "zdrowa-zywnosc",
+    "mrozonki",
+    "artykuly-spozywcze",
+    "piekarnia-ciastkarnia",
+    "dziecko/zywnosc-dla-dzieci"]
+}
